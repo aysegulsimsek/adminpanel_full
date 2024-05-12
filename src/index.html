@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Admin</title>
+</head>
+
+<body class=" bg-grey">
+    <div class="container relative max-w-full">
+        <!-- SIDEBAR -->
+        <section id="sidebar" class="sidebar fixed top-0 w-[200px] lg:w-[280px]   h-full bg-light z-[1000] font-secondary transition-all duration-300 ease-linear overflow-x-hidden">
+            <a class="brand text-[20px] font-semibold h-[56px] flex items-center  text-[#fae197] font-primary" href="#">
+                <i class="ri-star-smile-line min-w-[50px] flex justify-center  "></i>
+                <span class="text">AdminPanel</span>
+            </a>
+            <ul class="side-menu top w-full mt-6 grid gap-2">
+                <li class="">
+                    <a href="#">
+                        <i class="ri-menu-unfold-fill min-w-[40px] flex justify-center"></i>
+                        <span class="text ">Dashboard</span>
+                    </a>
+                </li>
+                <li class="  h-[48px] bg-grey ml-[6px] rounded-[48px] p-[4px] cursor-pointer">
+                    <a href="#">
+                        <i class="ri-shopping-bag-line  min-w-[40px] flex justify-center"></i>
+                        <span class="text">My Store</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-donut-chart-line  min-w-[40px] flex justify-center"></i>
+                        <span class="text">Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-message-2-line  min-w-[40px] flex justify-center"></i>
+                        <span class="text">Message</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="side-menu  w-full mt-6 grid gap-2">
+                <li>
+                    <a href="#">
+                        <i class="ri-group-line min-w-[40px] flex justify-center"></i>
+                        <span class="text">Team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-settings-2-line  min-w-[40px] flex justify-center"></i>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-red logout">
+                        <i class=" logout text-red hover:text-red ri-logout-box-line min-w-[40px] flex justify-center"></i>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CONTENT -->
+        <section id="content" class="relative h-full max-w-full justify-evenly ml-[180px] lg:ml-[280px]  top-0  overflow-y-hidden">
+            <!-- NAVBAR -->
+            <nav class="h-[80px] sm:h-[56px] max-w-full w-full bg-light pl-6 px-1 sm:px-6 flex justify-around items-baseline sm:items-center font-secondary ">
+                <div class="nv__link text-lg flex font-bold gap-2 p-2 transition-all duration-300 ease-linear hover:text-[#eab308] cursor-pointer">
+                    <i class="ri-menu-line mr-1"></i>
+                    <a href="#" class="nav-link text-dark text-[16px] transition-all duration-300 ease-linear hover:text-[#eab308] hidden md:block">Categories</a>
+                </div>
+                <form action="#" class=" max-w-[400px] w-full ">
+                    <div class="form-input flex items-center h-9 mr-0 pr-0 box-border">
+                        <input type="search" placeholder="Search..." class="text-secondary box-border outline-none grow px-4 h-full bg-grey rounded-l-3xl hidden md:block">
+                        <button type="submit" class="search-btn w-8 lg:w-8 lg:h-full flex box-border md:justify-center items-center md:h-full md:bg-[#fae197] text-light text-lg md:rounded-r-3xl rounded-[4px] cursor-pointer">
+                        <i class="ri-search-2-line text-dark font-bold"></i>
+                    </button>
+                    </div>
+                </form>
+                <div class=" text-xl relative flex items-center  gap-2">
+
+                    <a href="#" class="notification text-dark items-center justify-center">
+                        <i class="ri-notification-2-line mr-3"></i>
+                        <span class="num absolute top-0 left-[10px] w-5 h-5 rounded-full border border-light bg-[#fae197] font-bold text-light text-xs flex justify-center items-center">8</span>
+                    </a>
+
+                    <div class="border border-[#eab308] rounded-full shadow-xl">
+                        <a href="#" class="text-dark">
+                            <img class="profile rounded-full w-full h-8 sm:w-10 sm:h-10  object-cover mr-auto ml-auto" src="img.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+
+            </nav>
+
+            <!-- MAIN -->
+            <main id="main" class="p-4 lg:p-9 font-primary max-w-full bg-grey ml-[10px]  overflow-hidden">
+                <div class="head-title flex items-center justify-around gap-4 flex-wrap">
+                    <div class="left">
+                        <h1 class="text-4xl font-semibold mb-3 text-dark">Dashboard</h1>
+                        <ul class="breadcrumb flex items-center gap-4">
+                            <li>
+                                <a class="text-darkGrey pointer-events-none" href="#">Dashboard</a>
+                            </li>
+                            <li>
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </li>
+                            <li>
+                                <a class="active text-darkGrey pointer-events-none" href="#">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-download h-9 px-4 rounded-[36px] bg-blue text-light flex justify-center items-center gap-2 font-medium">
+                        <i class="ri-download-cloud-line"></i>
+                        <span class="text">Download PDF</span>
+                    </a>
+                </div>
+                <ul class="box-info mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 items-center justify-center lg:justify-between">
+                    <li class="flex w-full max-w-full items-center p-6 rounded-[20px] gap-6 bg-white">
+                        <i class="ri-calendar-check-fill w-[80px] h-[80px] rounded-[10px] bg-lightBlue text-blue text-4xl flex items-center justify-center"></i>
+                        <span class="text overflow-hidden">
+                            <h3 class="text-2xl font-semibold">1020</h3>
+                            <p class="text-lg font-semibold">New Order</p>
+                        </span>
+                    </li>
+                    <li class="flex items-center p-6 rounded-[20px] gap-6 bg-white">
+                        <i class="ri-group-fill w-[80px] h-[80px] rounded-[10px] bg-lightYellow text-yellow text-4xl flex items-center justify-center"></i>
+                        <span class="text overflow-hidden">
+                            <h3 class="text-2xl font-semibold">2834</h3>
+                            <p class="text-lg font-semibold">Visitors</p>
+                        </span>
+                    </li>
+                    <li class="flex items-center p-6 rounded-[20px] gap-6 bg-white">
+                        <i class="ri-money-dollar-circle-fill w-[80px] h-[80px] rounded-[10px] bg-lightOrange text-orange text-4xl flex items-center justify-center"></i>
+                        <span class="text overflow-hidden">
+                            <h3 class="text-2xl font-semibold">1020</h3>
+                            <p class="text-lg font-semibold">$2543</p>
+                        </span>
+                    </li>
+                </ul>
+                <div class="table-data flex flex-wrap gap-6 mt-6 w-full text-dark">
+                    <div class="order rounded-[20px] bg-light p-6  flex-grow basis-[500px] overflow-x-auto">
+                        <div class="head one rounded-[20px] bg-light p-6 flex items-center font-bold gap-4">
+                            <h3 class="mr-auto ">Recent Orders</h3>
+                            <i class="ri-search-2-line"></i>
+                            <i class="ri-filter-3-line"></i>
+                        </div>
+                        <table class="w-full border-collapse">
+                            <thead class="">
+                                <tr>
+                                    <th>User</th>
+                                    <th>Date Order</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-medium">
+                                <tr class="">
+                                    <td>
+                                        <img class="" src="img.jpg" alt="">
+                                        <p class="name">Johann Doe</p>
+                                    </td>
+                                    <td>01-10-2024</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img class="" src="img.jpg" alt="">
+                                        <p class="name">Johann Doe</p>
+                                    </td>
+                                    <td>01-10-2024</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img class="" src="img.jpg" alt="">
+                                        <p class="name">Johann Doe</p>
+                                    </td>
+                                    <td>01-10-2024</td>
+                                    <td><span class="status process">Process</span></td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        <img class="" src="img.jpg" alt="">
+                                        <p class="name">Johann Doe</p>
+                                    </td>
+                                    <td>01-10-2024</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr class="">
+                                    <td class="">
+                                        <img class="" src="img.jpg" alt="">
+                                        <p class="name">Johann Doe</p>
+                                    </td>
+                                    <td>01-10-2024</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="todo grow rounded-[20px] bg-light p-6 overflow-x-auto">
+                        <div class="head  rounded-[20px] bg-light p-1 font-bold gap-6">
+                            <h3>To do</h3>
+                            <i class="ri-add-line addBtn"></i>
+                            <i class="ri-filter-3-line"></i>
+                        </div>
+                        <div class=" justify-end items-center rounded-2xl hidden  mb-3 border-collapse  w-full" id="myInput">
+                            <input class="box-border border rounded-l-md text-left outline-none" type="text" placeholder=" Title...">
+                            <span onclick="newElement()" class="add ml-[-5px] h-auto px-2 py-[4px] cursor-pointer text-primaryDEFAULT rounded-md bg-grey ">Add</span>
+                        </div>
+                        <ul class="todo-list font-medium w-full" id="myUL">
+                            <li class="completed">
+                                <p>Gym</p>
+                                <i class="ri-edit-circle-fill cursor-pointer hover:text-red relative"></i>
+                                <div class="edit_section hidden absolute text-sm right-[60px] font-light bg-light p-1 rounded border">
+                                    <div class="edit_note cursor-pointer hover:bg-lightYellow">Edit Note</div>
+                                    <div class="remove_item cursor-pointer hover:bg-lightYellow flex items-center">Remove <span><i class="ri-close-line text-base"></i></span></div>
+                                </div>
+                            </li>
+
+                            <li class="completed">
+                                <p>Shopping List</p>
+                                <i class="ri-edit-circle-fill cursor-pointer hover:text-red relative"></i>
+                                <div class="edit_section hidden absolute text-sm right-[60px] font-light bg-light p-1 rounded border">
+                                    <div class="edit_note cursor-pointer hover:bg-lightYellow ">Edit Note</div>
+                                    <div class="remove_item cursor-pointer hover:bg-lightYellow flex items-center">Remove <span><i class="ri-close-line text-base"></i></span></div>
+                                </div>
+                            </li>
+                            <li class="not-completed">
+                                <p>Homework</p>
+                                <i class="ri-edit-circle-fill cursor-pointer hover:text-red relative"></i>
+                                <div class="edit_section hidden absolute text-sm right-[60px] font-light bg-light p-1 rounded  border">
+                                    <div class="edit_note cursor-pointer hover:bg-lightYellow">Edit Note</div>
+                                    <div class="remove_item cursor-pointer hover:bg-lightYellow flex items-center">Remove <span><i class="ri-close-line text-base"></i></span></div>
+                                </div>
+                            </li>
+                            <li class="completed">
+                                <p>Dog grooming</p>
+                                <i class="ri-edit-circle-fill cursor-pointer hover:text-red relative"></i>
+                                <div class="edit_section hidden absolute text-sm right-[60px] font-light bg-light p-1 rounded  border">
+                                    <div class="edit_note cursor-pointer hover:bg-lightYellow">Edit Note</div>
+                                    <div class="remove_item cursor-pointer hover:bg-lightYellow flex items-center">Remove <span><i class="ri-close-line text-base"></i></span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#sidebar .side-menu li.active {
+    position: relative;
+    background-color: white;
+}
+
+#sidebar .side-menu li.active a {
+    background-color: #eeeeee;
+}
+
+#sidebar.hide {
+    width: 47px;
+}
+
+#content {
+    transition: .3s ease;
+}
+
+#sidebar.hide~#content {
+    width: calc(100% - 47px);
+    left: 47px;
+    margin-left: 0;
+}
+
+#sidebar.hide~#content nav {
+    width: 100%;
+    margin-left: 0;
+}
+
+#sidebar.hide~#main {
+    width: calc(100% - 200px);
+    left: 45px;
+}
+
+#content nav form.show .form-input button {
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    color: #000;
+    z-index: 1000;
+}
+
+#content nav form.show .form-input input {
+    position: absolute;
+    width: 95%;
+    top: 40px;
+    left: 5%;
+    height: 40px;
+    display: block;
+    background-color: #fff;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border: 1px solid #f9f9f9;
+    z-index: 10000;
+    /*  */
+}
+
+#content main .head-title .left .breadcrumb li a.active {
+    color: #e5e594;
+    pointer-events: unset;
+}
+
+@layer components {
+    #sidebar .side-menu li {
+        @apply h-[48px] bg-lightOrange bg-transparent ml-[6px] p-[4px] rounded-[48px] font-secondary font-medium;
+    }
+    #sidebar .side-menu li a {
+        @apply w-full h-full bg-light flex items-center rounded-[48px] transition-all duration-500;
+    }
+    #sidebar .side-menu li a:hover {
+        @apply bg-grey -translate-x-1 duration-200;
+    }
+    #sidebar .side-menu li a:hover .ri-logout-box-line {
+        @apply text-red duration-200;
+    }
+    #sidebar .side-menu li a:hover i {
+        @apply text-[#fae197] duration-500;
+    }
+    #sidebar .side-menu li a i {
+        @apply text-primaryDEFAULT text-xl;
+    }
+    #main table tbody tr td img {
+        @apply w-10 rounded-full object-cover;
+    }
+    /* .search-btn{
+        @apply w-[40px] h-[40px];
+    } */
+    #content main .table-data .head {
+        @apply flex items-center gap-4 mb-6;
+    }
+    #content main .table-data .head i {
+        @apply cursor-pointer text-xl;
+    }
+    #content main .table-data .head h3 {
+        @apply mr-auto text-2xl font-semibold;
+    }
+    #content main .table-data .order table th {
+        @apply pb-3 text-sm text-left border-b border-grey;
+    }
+    #content main .table-data .order table td {
+        @apply py-4;
+    }
+    #content main .table-data .order table tr {
+        @apply rounded-lg max-w-full w-full;
+    }
+    #content main .table-data .order table tr td:first-child {
+        @apply flex items-center px-2 gap-3;
+    }
+    #content main .table-data .order table td img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    #content main .table-data .order table tr td .status {
+        @apply text-[12px] py-[6px] px-4 rounded-[20px] text-light font-bold;
+    }
+    #content main .table-data .order table tr td .status.completed {
+        @apply bg-blue;
+    }
+    #content main .table-data .order table tr td .status.process {
+        @apply bg-yellow;
+    }
+    #content main .table-data .order table tr td .status.pending {
+        @apply bg-orange;
+    }
+    #content main .table-data .order table tbody tr:hover {
+        @apply bg-grey;
+    }
+    #content main .table-data .todo .todo-list li {
+        @apply w-full mb-4 bg-grey rounded-xl py-4 px-5 border-l-[10px] flex items-center justify-between;
+    }
+    #content main .table-data .todo .todo-list li .ri-edit-circle-fill {
+        @apply text-dark cursor-pointer;
+    }
+    #content main .table-data .todo .todo-list li.completed {
+        @apply border-l-[10px] border-blue;
+    }
+    #content main .table-data .todo .todo-list li.not-completed {
+        @apply border-l-[10px] border-orange;
+    }
+    @media screen and (max-width: 768px) {
+        #content nav .nav-link {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        #content nav form .form-input input {
+            display: none;
+        }
+        #content nav form .form-input button {
+            width: auto;
+            height: auto;
+            background: transparent;
+            border-radius: none;
+            color: var(--dark);
+        }
+        #content nav form.show .form-input input {
+            display: block;
+            width: 100%;
+        }
+        #content nav form.show .form-input button {
+            width: 36px;
+            height: 100%;
+            border-radius: 0 36px 36px 0;
+            color: var(--light);
+            background: var(--red);
+        }
+        #content nav form.show~.notification,
+        #content nav form.show~.profile {
+            display: none;
+        }
+        #content main .box-info {
+            grid-template-columns: 1fr;
+        }
+        #content main .table-data .head.one {
+            min-width: 380px;
+        }
+        #content main .table-data .order table {
+            min-width: 380px;
+        }
+    }
+}
